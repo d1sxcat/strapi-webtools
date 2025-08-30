@@ -14,7 +14,7 @@ module.exports = {
   //   enabled: true,
   // },
 
-  // 'webtools-addon-menus': {
-  //   enabled: true,
-  // },
+  'webtools-addon-menus': {
+    enabled: true,
+  },
 };

@@ -14,7 +14,7 @@
     "tscheck": "tsc --noEmit",
     "release:publish": "turbo run build && changeset publish",
     "release:prepare": "changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install",
-    "playground:install": "cd playground && yarn dlx yalc add --link strapi-plugin-webtools webtools-addon-sitemap && yarn install",
+    "playground:install": "cd playground && yarn dlx yalc add --link strapi-plugin-webtools webtools-addon-sitemap webtools-addon-menus && yarn install",
     "playground:build": "cd playground && yarn build",
     "playground:start": "cd playground && yarn start",
     "playground:develop": "rm -rf playground/node_modules/.strapi/ && cd playground && yarn develop --watch-admin --bundler=vite",

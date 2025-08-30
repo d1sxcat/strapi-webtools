@@ -433,6 +433,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    adaasd: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::webtools-addon-menus.wt_link'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1054,6 +1056,53 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface PluginWebtoolsAddonMenusMenu
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'menus';
+  info: {
+    displayName: 'Menu';
+    pluralName: 'menus';
+    singularName: 'menu';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: true;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'plugin::webtools-addon-menus.menu'
+    >;
+    menu_components: Schema.Attribute.DynamicZone<
+      ['menus.wt-menu-item', 'menus.wt-menu-section']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginWebtoolsAddonSitemapSitemap
   extends Struct.CollectionTypeSchema {
   collectionName: 'wt_sitemap';
@@ -1214,6 +1263,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'plugin::webtools-addon-menus.menu': PluginWebtoolsAddonMenusMenu;
       'plugin::webtools-addon-sitemap.sitemap': PluginWebtoolsAddonSitemapSitemap;
       'plugin::webtools.url-alias': PluginWebtoolsUrlAlias;
       'plugin::webtools.url-pattern': PluginWebtoolsUrlPattern;

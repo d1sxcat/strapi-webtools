@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_menus_wt_menu_items",
+  "info": {
+    "displayName": "WT Menu Item"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::webtools.url-alias",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

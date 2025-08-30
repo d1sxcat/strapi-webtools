@@ -62,7 +62,10 @@ export default {
       const ctbFormsAPI = ctbPlugin.apis.forms;
       // @ts-expect-error
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      ctbFormsAPI.components.add({ id: 'webtools.checkboxConfirmation', component: CheckboxConfirmation });
+      ctbFormsAPI.components.add({
+        id: 'webtools.checkboxConfirmation',
+        component: CheckboxConfirmation,
+      });
 
       // @ts-expect-error
       ctbFormsAPI.extendContentType({
@@ -78,7 +81,8 @@ export default {
                 name: 'pluginOptions.webtools.enabled',
                 description: {
                   id: getTrad('webtools.enabled.description-content-type'),
-                  defaultMessage: 'Webtools - entries of this type are considered web pages.',
+                  defaultMessage:
+                    'Webtools - entries of this type are considered web pages.',
                 },
                 type: 'webtools.checkboxConfirmation',
                 intlLabel: {

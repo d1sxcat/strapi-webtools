@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_menus_wt_menu_sections",
+  "info": {
+    "displayName": "WT Menu Section"
+  },
+  "options": {},
+  "attributes": {
+    "menu_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menus.wt-menu-item"
+    }
+  }
+}

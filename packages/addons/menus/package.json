@@ -1,0 +1,89 @@
+{
+  "version": "0.0.1",
+  "keywords": [],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "bin": {
+    "strapi-menus": "./bin/strapi-menus"
+  },
+  "scripts": {
+    "build": "pack-up build && yalc push --publish",
+    "watch": "pack-up watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:front": "run -T tsc -p admin/tsconfig.json",
+    "test:ts:back": "run -T tsc -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "formik": "^2.4.0",
+    "lodash": "^4.17.21",
+    "qs": "^6.14.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-intl": "^6.4.1",
+    "react-query": "^3.39.3",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@strapi/admin": "^5.0.0",
+    "@strapi/design-system": "^2.0.0-rc",
+    "@strapi/icons": "^2.0.0-rc",
+    "@strapi/pack-up": "^5.0.0",
+    "@strapi/sdk-plugin": "^5.0.0",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/utils": "^5.0.0",
+    "@types/koa": "^2.15.0",
+    "@types/lodash": "^4",
+    "@types/qs": "^6",
+    "@types/react-copy-to-clipboard": "^5.0.7",
+    "eslint": "^8.57.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@strapi/admin": "^5.0.0",
+    "@strapi/design-system": "^2.0.0-rc",
+    "@strapi/icons": "^2.0.0-rc",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/utils": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "strapi": {
+    "name": "webtools-addon-menus",
+    "displayName": "Webtools Menus",
+    "description": "Generate customizable navigation menus in Strapi CMS.",
+    "required": false,
+    "kind": "plugin",
+    "webtoolsAddon": true,
+    "addonName": "Menus"
+  },
+  "name": "webtools-addon-menus",
+  "description": "Generate customizable navigation menus in Strapi CMS.",
+  "license": "MIT",
+  "author": "d1sxcat <shaun.mills@live.com>"
+}
