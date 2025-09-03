@@ -2,8 +2,8 @@ import menuItem from "./components/menus/wt-menu-item.json";
 import menuSection from "./components/menus/wt-menu-section.json";
 
 const ACTIONS = {
-  readMenus: "plugin::webtools-addon-menus.settings.read",
-  writeMenus: "plugin::webtools-addon-menus.settings.write",
+  read: "plugin::webtools-addon-menus.settings.read",
+  write: "plugin::webtools-addon-menus.settings.write",
 };
 
 export { ACTIONS };

@@ -1088,8 +1088,14 @@ export interface PluginWebtoolsAddonMenusMenu
       'plugin::webtools-addon-menus.menu'
     >;
     menu_components: Schema.Attribute.DynamicZone<
-      ['menus.wt-menu-item', 'menus.wt-menu-section']
+      ['menus.wt-menu-section', 'menus.wt-menu-item']
     > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

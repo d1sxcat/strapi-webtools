@@ -5,13 +5,13 @@ const bootstrap = async ({ strapi }: { strapi: Core.Strapi }) => {
     {
       section: "plugins",
       displayName: "Access the Menus editor",
-      uid: "settings.read",
+      uid: "read",
       pluginName: "webtools-addon-menus",
     },
     {
       section: "plugins",
-      displayName: "Edit Menus",
-      uid: "settings.write",
+      displayName: "Create and Edit Menus",
+      uid: "write",
       pluginName: "webtools-addon-menus",
     },
   ];

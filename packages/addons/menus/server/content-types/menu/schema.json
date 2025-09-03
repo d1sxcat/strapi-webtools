@@ -13,7 +13,7 @@
     "i18n": {
       "localized": true
     },
-     "content-manager": {
+    "content-manager": {
       "visible": true
     },
     "content-type-builder": {
@@ -21,6 +21,15 @@
     }
   },
   "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "menu_components": {
       "type": "dynamiczone",
       "pluginOptions": {
@@ -28,8 +37,8 @@
           "localized": true
         }
       },
-      "components": ["menus.wt-menu-item", "menus.wt-menu-section"],
-      "required": true
+      "configurable": false,
+      "components": []
     }
   }
 }

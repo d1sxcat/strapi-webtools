@@ -4,7 +4,23 @@ export default {
     {
       method: "GET",
       path: "/components",
-      handler: "components.getComponents",
+      handler: "components.getAllComponents",
+      config: {
+        policies: [],
+      },
+    },
+    {
+      method: "GET",
+      path: "/component/:uid",
+      handler: "components.getComponent",
+      config: {
+        policies: [],
+      },
+    },
+    {
+      method: "POST",
+      path: "/components",
+      handler: "components.createComponents",
       config: {
         policies: [],
       },
