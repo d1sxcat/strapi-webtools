@@ -1,12 +1,12 @@
 {
   "name": "webtools-addon-link",
   "version": "1.0.0",
-  "description": "Adds a custom link field type",
+  "description": "Custom field Link for your Strapi content",
   "strapi": {
     "name": "webtools-addon-link",
     "icon": "link",
     "displayName": "Webtools Link",
-    "description": "Adds a custom link field type",
+    "description": "Custom field Link for your Strapi content",
     "required": false,
     "kind": "plugin",
     "webtoolsAddon": true,
