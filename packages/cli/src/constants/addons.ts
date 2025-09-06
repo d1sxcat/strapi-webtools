@@ -12,7 +12,7 @@ export const AVAILABLE_ADDONS: Addon[] = [
   },
   {
     name: 'link',
-    description: 'Adds a custom link field type',
+    description: 'Custom field Link for your Strapi content',
     packageName: 'webtools-addon-link',
   },
 ];
