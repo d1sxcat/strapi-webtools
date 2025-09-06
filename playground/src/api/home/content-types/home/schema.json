@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {
     "webtools": {
@@ -16,8 +16,18 @@
     }
   },
   "attributes": {
+    "url_alias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::webtools.url-alias",
+      "configurable": false
+    },
     "title": {
       "type": "string"
+    },
+    "grdgdhd": {
+      "type": "customField",
+      "customField": "plugin::webtools-addon-link.wt_link"
     }
   }
 }

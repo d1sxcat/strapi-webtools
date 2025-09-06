@@ -1,0 +1,12 @@
+{
+  "settings.header.label": "Link",
+  "settings.sub-header.label": "Instellingen voor de Link-addon",
+  "settings.form.title": "Instellingen",
+  "settings.form.description": "Pas het Link aangepaste veld aan",
+  "settings.form.sortBy.label": "Sorteren op",
+  "settings.form.sortBy.description": "Selecteer het veld waarop de links gesorteerd moeten worden",
+  "settings.form.sortOrder.label": "Sorteervolgorde",
+  "settings.form.sortOrder.description": "Selecteer de volgorde waarin de links gesorteerd moeten worden",
+  "field.name": "Link",
+  "field.description": "Selecteer een link uit de lijst"
+}

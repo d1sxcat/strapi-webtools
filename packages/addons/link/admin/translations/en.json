@@ -1,0 +1,12 @@
+{
+  "settings.header.label": "Link",
+  "settings.sub-header.label": "Settings for the Link addon",
+  "settings.form.title": "Settings",
+  "settings.form.description": "Customise the Link Custom Field",
+  "settings.form.sortBy.label": "Sort By",
+  "settings.form.sortBy.description": "Select the field to sort the links by.",
+  "settings.form.sortOrder.label": "Sort Order",
+  "settings.form.sortOrder.description": "Select the order to sort the links by.",
+  "field.name": "Link",
+  "field.description": "Select a link from the list"
+}

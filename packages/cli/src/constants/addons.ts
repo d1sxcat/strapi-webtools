@@ -10,6 +10,11 @@ export const AVAILABLE_ADDONS: Addon[] = [
     description: 'Generate a sitemap for your Strapi content',
     packageName: 'webtools-addon-sitemap',
   },
+  {
+    name: 'link',
+    description: 'Adds a custom link field type',
+    packageName: 'webtools-addon-link',
+  },
 ];
 
 export const PREMIUM_ADDONS: Addon[] = [

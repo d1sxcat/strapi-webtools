@@ -1,0 +1,12 @@
+{
+  "settings.header.label": "Enlace",
+  "settings.sub-header.label": "Configuración del complemento de enlace",
+  "settings.form.title": "Configuración",
+  "settings.form.description": "Personalizar el campo personalizado de enlace",
+  "settings.form.sortBy.label": "Ordenar por",
+  "settings.form.sortBy.description": "Seleccione el campo por el cual se ordenarán los enlaces",
+  "settings.form.sortOrder.label": "Orden de clasificación",
+  "settings.form.sortOrder.description": "Seleccione el orden en que se clasificarán los enlaces",
+  "field.name": "Enlace",
+  "field.description": "Seleccione un enlace de la lista"
+}

@@ -425,7 +425,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     singularName: 'home';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     webtools: {
@@ -436,6 +436,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    grdgdhd: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::webtools-addon-link.wt_link'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;

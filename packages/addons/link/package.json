@@ -1,0 +1,94 @@
+{
+  "name": "webtools-addon-link",
+  "version": "0.0.1",
+  "description": "Adds a custom link field type",
+  "strapi": {
+    "name": "webtools-addon-link",
+    "icon": "link",
+    "displayName": "Webtools Link",
+    "description": "Adds a custom link field type",
+    "required": false,
+    "kind": "plugin",
+    "webtoolsAddon": true,
+    "addonName": "Link"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "scripts": {
+    "build": "pack-up build && yalc push --publish",
+    "watch": "pack-up watch",
+    "watch:link": "strapi-plugin watch:link",
+    "eslint": "eslint --max-warnings=0 './**/*.{js,jsx,ts,tsx}'",
+    "eslint:fix": "eslint --fix './**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "react-intl": "^6.4.1",
+    "react-query": "^3.39.3"
+  },
+  "devDependencies": {
+    "@strapi/admin": "^5.0.0",
+    "@strapi/design-system": "^2.0.0-rc",
+    "@strapi/icons": "^2.0.0-rc",
+    "@strapi/pack-up": "^5.0.0",
+    "@strapi/sdk-plugin": "^5.0.0",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/utils": "^5.0.0",
+    "@types/koa": "^2.15.0",
+    "@types/lodash": "^4",
+    "@types/qs": "^6",
+    "@types/react-copy-to-clipboard": "^5.0.7",
+    "eslint": "^8.57.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@strapi/admin": "^5.0.0",
+    "@strapi/design-system": "^2.0.0-rc",
+    "@strapi/icons": "^2.0.0-rc",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/utils": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "author": {
+    "name": "d1sxcat",
+    "email": "shaun.mills@live.com",
+    "url": "https://github.com/d1sxcat"
+  },
+  "bugs": {
+    "url": "https://github.com/pluginpal/strapi-webtools/issues"
+  },
+  "homepage": "https://github.com/pluginpal/strapi-webtools",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pluginpal/strapi-webtools.git"
+  },
+  "engines": {
+    "node": ">=18.x.x <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
